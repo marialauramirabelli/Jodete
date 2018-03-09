@@ -306,6 +306,9 @@ void mousePressed(){
   //mouse pressed on RESTART
   if(mouseX>=buttonX && mouseX<=(buttonX+buttonWidth) && mouseY>=buttonY && mouseY<=(buttonY+buttonHeight)){
     turn = 0;
+    if(endGame){
+      endGame = false;
+    }
     setup();
   }
   if(turn%2==0){
